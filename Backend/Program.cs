@@ -28,7 +28,7 @@ builder.Services.AddSingleton<IElasticClient>(provider =>
 {
     var node = new Uri("http://localhost:9200");
     var settings = new ConnectionSettings(node)
-        .DefaultIndex("newdata"); // Set your index name
+        .DefaultIndex("content-data"); // Set your index name
 
     return new ElasticClient(settings);
 });
